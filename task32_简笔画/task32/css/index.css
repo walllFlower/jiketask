@@ -1,0 +1,271 @@
+div{
+	position: absolute;
+}
+
+/* above */
+.head,.left-eye,.right-eye,.left-brow,.right-brow,.nose,.mouse,.hair1,.hair2,.hair3{
+	z-index: 1;
+}
+
+/* ground */
+.left-ear,.right-ear,.neck,.hand{
+	z-index: 0;
+}
+
+/* below */
+.body,.body-bottom{
+	z-index: -1;
+}
+
+.head{
+	height: 220px;
+	width: 220px;
+	margin: 100px 0 0 100px;
+	background-color: #fff0de;
+	border: 8px solid #000;
+	border-radius: 50%;
+}
+
+
+.left-ear,.right-ear{
+	height: 80px;
+	width: 80px;
+	background-color: #fff0de;/* 耳朵颜色 */
+	border: 8px solid #000;
+	border-radius: 50%;
+}
+.left-ear{
+	margin: 188px 0 0 72px;
+}
+
+.right-ear{
+	margin: 188px 0 0 270px;
+}
+
+.left-brow,.right-brow{
+	height: 40px;
+	width: 40px;
+	border: 6px solid transparent;
+	border-top-color: #000; 
+	border-radius: 50%;
+}
+
+.left-brow{
+	margin: 161px 0 0 152px;
+}
+
+.right-brow{
+	margin: 161px 0 0 233px;
+}
+
+.left-eye,.right-eye{
+	height: 18px;
+	width: 8px;
+	border: 12px solid #000;
+	background-color: #fff;
+	border-radius: 50%;
+	-webkit-animation:eyeanimations 4s linear infinite;
+	-moz-animation:eyeanimations 4s linear infinite;
+    animation:eyeanimations 4s linear infinite;
+}
+
+.left-eye{
+	margin: 180px 0 0 162px;
+}
+
+.right-eye{
+	margin: 180px 0 0 243px;
+}
+
+/* blink */
+@-webkit-keyframes eyeanimations{
+    0%{background-color:#fff;}
+    2%{background-color:#000;}
+    4%{background-color:#fff;}
+    6%{background-color:#000;}
+    10%{background-color:#fff;}
+    100%{background-color:#fff;}
+}
+@-moz-keyframes eyeanimations{
+    0%{background-color:#fff;}
+    2%{background-color:#000;}
+    4%{background-color:#fff;}
+    6%{background-color:#000;}
+    10%{background-color:#fff;}
+    100%{background-color:#fff;}
+}
+@keyframes eyeanimations{
+    0%{background-color:#fff;}
+    2%{background-color:#000;}
+    4%{background-color:#fff;}
+    6%{background-color:#000;}
+    10%{background-color:#fff;}
+    100%{background-color:#fff;}
+}
+
+.nose{
+	height: 20px;
+	width: 20px;
+	margin: 233px 0 0 205px;
+	border-left: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	border-right: 4px solid #000;
+	border-top: 4px solid #000;
+	border-radius: 50%;
+}
+
+.mouse{
+	width: 22px;
+	height: 10px;
+	margin: 282px 0 0 206px;
+	border: 3px solid #000;
+	border-radius: 50%;
+	background-color: #f44336;
+}
+
+.hair1{
+	width: 60px;
+	height: 60px;
+	margin: 79px 0 0 124px;
+	border: 4px solid transparent;
+	border-radius: 45%;
+	border-right-color: #000;
+	-webkit-transform-origin: 80% 80%;
+	-moz-transform-origin: 80% 80%;
+	transform-origin: 80% 80%;
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+	-webkit-animation:hair1animations 3s ease infinite;
+	-moz-animation:hair1animations 3s ease infinite;
+    animation:hair1animations 3s ease infinite;
+}
+
+.hair2{
+	width: 65px;
+	height: 65px;
+	margin: 69px 0 0 155px;
+	border: 4px solid transparent;
+	border-radius: 50%;
+	border-right-color: #000;
+	-webkit-transform-origin: 80% 80%;
+	-moz-transform-origin: 80% 80%;
+	transform-origin: 80% 80%;
+	-webkit-transform: rotate(-4deg);
+	-moz-transform: rotate(-4deg);
+	transform: rotate(-4deg);
+	-webkit-animation:hair2animations 3s ease infinite;
+	-moz-animation:hair2animations 3s ease infinite;
+    animation:hair2animations 3s ease infinite;
+}
+
+.hair3{
+	width: 60px;
+	height: 45px;
+	margin: 76px 0 0 194px;
+	border: 4px solid transparent;
+	border-bottom: 0;
+	border-top-right-radius: 75%;
+	border-right-color: #000;
+	-webkit-transform: rotate(16deg);	
+	-moz-transform: rotate(16deg);	
+	transform: rotate(16deg);	
+	-webkit-transform-origin: right bottom;
+	-moz-transform-origin: right bottom;
+	transform-origin: right bottom;
+    -webkit-animation:hair3animations 3s ease infinite;
+    -moz-animation:hair3animations 3s ease infinite;
+    animation:hair3animations 3s ease infinite;
+}
+
+/* hair swing */
+@-webkit-keyframes hair3animations{
+    0%{-webkit-transform:rotate(16deg);}
+    40%{-webkit-transform:rotate(-13deg);}
+    80%{-webkit-transform:rotate(16deg);}
+    100%{-webkit-transform:rotate(16deg);}
+}
+@-moz-keyframes hair3animations{
+    0%{-moz-transform:rotate(16deg);}
+    40%{-moz-transform:rotate(-13deg);}
+    80%{-moz-transform:rotate(16deg);}
+    100%{-moz-transform:rotate(16deg);}
+}
+@keyframes hair3animations{
+    0%{transform:rotate(16deg);}
+    40%{transform:rotate(-13deg);}
+    80%{transform:rotate(16deg);}
+    100%{transform:rotate(16deg);}
+}
+
+@-webkit-keyframes hair2animations{
+    0%{-webkit-transform:rotate(-4deg);}
+    40%{-webkit-transform:rotate(-30deg);}
+    80%{-webkit-transform:rotate(-4deg);}
+    0%{-webkit-transform:rotate(-4deg);}
+}@-moz-keyframes hair2animations{
+    0%{-moz-transform:rotate(-4deg);}
+    40%{-moz-transform:rotate(-30deg);}
+    80%{-moz-transform:rotate(-4deg);}
+    0%{-moz-transform:rotate(-4deg);}
+}
+@keyframes hair2animations{
+    0%{transform:rotate(-4deg);}
+    40%{transform:rotate(-30deg);}
+    80%{transform:rotate(-4deg);}
+    0%{transform:rotate(-4deg);}
+}
+@-webkit-keyframes hair1animations{
+    0%{-webkit-transform:rotate(-30deg);}
+    40%{-webkit-transform:rotate(-48deg);}
+    80%{-webkit-transform:rotate(-30deg);}
+    0%{-webkit-transform:rotate(-30deg);}
+}
+@-moz-keyframes hair1animations{
+    0%{-moz-transform:rotate(-30deg);}
+    40%{-moz-transform:rotate(-48deg);}
+    80%{-moz-transform:rotate(-30deg);}
+    0%{-moz-transform:rotate(-30deg);}
+}
+@keyframes hair1animations{
+    0%{transform:rotate(-30deg);}
+    40%{transform:rotate(-48deg);}
+    80%{transform:rotate(-30deg);}
+    0%{transform:rotate(-30deg);}
+}
+
+.neck{
+	width: 100px;
+	height: 80px;
+	margin: 259px 0 0 163px;
+	border: 8px solid #000;
+	background-color: #8bc34a;
+	border-radius: 50%;
+}
+
+.body{
+	margin: 319px 0 0 129px;
+	width: 120px;
+	border-right: 20px solid transparent;
+	border-left: 30px solid transparent;
+	border-bottom: 100px solid #000;
+	border-top: 0;
+}
+
+.body-bottom{
+	width: 170px;
+	height: 35px;
+	margin: 402px 0 0 129px;
+	border-radius: 50%;
+	background-color: #000;
+}
+
+.hand{
+    height: 76px;
+    width: 35px;
+    margin: 378px 0 0 261px;
+	border-radius: 50%;
+	border: 8px solid #000;
+	background-color: #009688;
+}
+

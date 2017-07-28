@@ -1,0 +1,30 @@
+h3{
+    margin-left: 80px;
+}
+#output {
+    text-align: right;
+    height: 40px;
+    font-size: 1.2em;
+}
+
+td {
+    text-align: center;
+}
+
+input {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    font-size: 1.4em;
+}
+
+input.operator,
+#sqrt,
+#log {
+    background: #4caf50;
+}
+
+#calc,
+#clear {
+    background: #ffc107;
+}

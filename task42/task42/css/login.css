@@ -1,0 +1,93 @@
+header h1{
+	height: 50px;
+	line-height: 50px;
+	display: inline-block;
+	margin: 0 10px;
+    font-family: 'RobotoCondensed', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+	text-transform: uppercase;
+	color: #1b926c;
+}
+header h1 span{
+	color: #333;
+}
+
+.login{
+	font-family: 'RobotoCondensed', Arial, Helvetica, sans-serif;
+	text-align: center;
+	border-radius: 15px;
+
+	width: 400px;
+	height: 290px;
+	background: #f00;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	background: #f8f8f8;
+	border: 1px solid #e7e7e7;
+}
+.login-top h1{
+	color: #1b926c;
+}
+.form-group{
+	width: 60%;
+	margin: 20px auto;
+}
+
+.form-group .form-control{
+	margin: 10px 0;
+	border-radius: 15px;
+}
+.forgot{
+	margin-bottom: 10px;
+}
+.forgot .forgot-button{
+	margin-left: 55px;
+    border-right: 2px solid #1b926c;
+    color: #1b926c;
+    padding-right: 8px;
+
+}
+.forgot .forgot-button:hover{
+	color: #555;
+	text-decoration: none;
+}
+.forgot .login-button{
+	text-decoration: none;
+	margin-left: 5px;
+	font-size: 16px;
+    margin-left: 5px;
+    border-radius: 10px;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    background-color: #1b926c!important;
+}
+
+.login-bottom{
+	border-top: 2px solid #176d52;
+	height: 90px;
+	background: #1b926c;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.login-bottom h3{
+	margin-right: 5px;
+	line-height: 45px;
+	text-align: right;
+	color: #fdfdfd;
+}
+.login-bottom a{
+	color: #fdfdfd;
+	font-size: 1.2em;
+}
+
+.login-bottom a:hover{
+	color: #555;
+	transition: color .2s;
+	text-decoration: none;
+}

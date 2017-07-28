@@ -1,0 +1,117 @@
+html{
+	/*渐变背景*/
+	background: -webkit-linear-gradient(#fff,#333 80%);
+	background: -moz-linear-gradient(#fff,#333 80%);
+	background: linear-gradient(#fff,#333 80%);
+	height:100%;
+}
+body{
+	width: 100%;
+	height: 100%;
+}
+.box{
+	margin:230px auto 230px auto;
+	position: relative;
+	height: 180px;
+	width: 180px;
+	-webkit-transform-style:preserve-3d;
+	   -moz-transform-style:preserve-3d;
+	        transform-style:preserve-3d;
+	-webkit-animation: rotates 10s infinite;
+	   -moz-animation: rotates 10s infinite;
+	        animation: rotates 10s infinite;
+}
+
+/*旋转动画*/
+@-webkit-keyframes rotates{
+ 	0%{-webkit-transform:rotateX(0deg) rotateY(0deg);}
+	50%{-webkit-transform: rotateX(360deg) rotateY(180deg);}
+ 	0%{-webkit-transform:rotateX(0deg) rotateY(0deg);}
+}
+
+@-moz-keyframes rotates{
+ 	0%{-moz-transform:rotateX(0deg) rotateY(0deg);}
+	50%{-moz-transform: rotateX(360deg) rotateY(180deg);}
+ 	0%{-moz-transform:rotateX(0deg) rotateY(0deg);}
+}
+
+@keyframes rotates{
+ 	0%{transform:rotateX(0deg) rotateY(0deg);}
+	50%{transform: rotateX(360deg) rotateY(180deg);}
+ 	0%{transform:rotateX(0deg) rotateY(0deg);}
+}
+
+.box > div{
+	position: absolute;
+	width:100%;
+	height:100%;
+	margin:auto;
+	opacity: 0.9;
+	border:1px solid transparent;
+}
+
+.front{
+	-webkit-transform: translateZ(90px);
+	   -moz-transform: translateZ(90px);
+	        transform: translateZ(90px);
+}
+
+.back{
+	-webkit-transform: translateZ(-90px) rotateY(180deg);
+	   -moz-transform: translateZ(-90px) rotateY(180deg);
+	        transform: translateZ(-90px) rotateY(180deg);
+}
+
+.top{
+	-webkit-transform: rotateX(90deg) translateZ(90px);
+	   -moz-transform: rotateX(90deg) translateZ(90px);
+	        transform: rotateX(90deg) translateZ(90px);
+}
+
+.bottom{
+	-webkit-transform: rotateX(90deg) translateZ(-90px);
+	   -moz-transform: rotateX(90deg) translateZ(-90px);
+	        transform: rotateX(90deg) translateZ(-90px);
+}
+
+.left{
+	-webkit-transform: rotateY(90deg) translateZ(-90px);
+	   -moz-transform: rotateY(90deg) translateZ(-90px);
+	        transform: rotateY(90deg) translateZ(-90px);
+}
+
+.right{
+	-webkit-transform: rotateY(-90deg) translateZ(-90px);
+	   -moz-transform: rotateY(-90deg) translateZ(-90px);
+	        transform: rotateY(-90deg) translateZ(-90px);
+}
+
+/*小方格*/
+.min-cube{
+	float:left;
+	display: inline-block;
+	width:58px;
+	height:58px;
+	border:1px solid #fff;
+	border-radius: 10px;
+}
+
+.front .min-cube{
+	background-color: #f58c20;
+}
+.back .min-cube{
+	background-color: #0f0;
+}
+.top .min-cube{
+	background-color: #f00;
+}
+.bottom .min-cube{
+	background-color: #00f;
+}
+.left .min-cube{
+	background-color: #ff0;
+}
+.right .min-cube{
+	background-color: #cd64f9;
+}
+

@@ -1,0 +1,146 @@
+.stranger{
+	box-sizing: border-box;
+	background-color: #ccc;
+	width: 100px;
+	height: 100px;
+	border: 2px solid #000;
+	padding: 5px;
+	margin: 5px;
+}
+
+.normal{
+	background-color: #ccc;
+	width: 100px;
+	height: 100px;
+	border: 2px solid #000;
+	padding: 5px;
+	margin: 5px;
+}
+
+#inner{
+	width: 100px;
+	height: 100px;
+}
+
+.col{
+	/* width: 300px; */
+	/* -webkit-columns:100px 3; */
+	-webkit-column-rule: 2px dotted #369;
+	-webkit-column-count: 4;
+	-webkit-column-gap: 30px;
+}
+
+.outer{
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	width: 400px;
+	height: 400px;
+	background-color: #f00;
+}
+
+
+.inner{
+	width: 200px;
+	height: 200px;
+	background-color: #0f0;
+}
+
+/* 伸缩盒模型容器 */
+.oldbox1{
+	display: -webkit-box;
+	width: 500px;
+	-webkit-box-orient:  horizontal;
+
+}
+
+/* 伸缩盒模型子元素 */
+.oldbox1 .box1{
+	height: 100px;
+	background-color: #555;
+	-webkit-box-flex: 1;
+}
+.oldbox1 .box2{
+	height: 50px;
+	background-color: #0f0;
+	-webkit-box-flex: 2;
+}
+.oldbox1 .box3{
+	height: 80px;
+	background-color: #00f;
+	-webkit-box-flex: 3;
+}
+
+.oldbox2{
+	display: -webkit-box;
+	height: 500px;
+	-webkit-box-orient:  vertical;
+
+}
+
+.oldbox2 .box1{
+	width: 100px;
+	background-color: #555;
+	-webkit-box-flex: 2;
+}
+.oldbox2 .box2{
+	width: 50px;
+	background-color: #0f0;
+	-webkit-box-flex: 1;
+}
+.oldbox2 .box3{
+	width: 80px;
+	background-color: #00f;
+	-webkit-box-flex: 1;
+}
+
+
+.newbox1{
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	height: 300px;
+}
+
+.newbox1 .box1{
+	-webkit-flex: 1;
+	order: 3;
+	width: 50px;
+	background-color: #369;
+} 
+.newbox1 .box2{
+	-webkit-flex: 2;
+	order: 1;
+	width: 100px;
+	background-color: #639;
+}
+.newbox1 .box3{
+	-webkit-flex: 1;
+	order: 2;
+	width: 150px;
+	background-color: #936;
+}
+
+.newbox2{
+	display: -webkit-flex;
+	-webkit-flex-direction: row;
+	width: 400px;
+}
+
+.newbox2 .box1{
+	-webkit-flex: 1;
+	order: 3;
+	height: 50px;
+	background-color: #369;
+} 
+.newbox2 .box2{
+	-webkit-flex: 2;
+	order: 1;
+	height: 100px;
+	background-color: #639;
+}
+.newbox2 .box3{
+	-webkit-flex: 1;
+	order: 2;
+	height: 150px;
+	background-color: #936;
+}

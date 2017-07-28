@@ -1,0 +1,32 @@
+body{
+	counter-reset: counter-question;/* 定义在需要计数的父元素上即可 */
+}
+
+.question{
+	counter-increment: counter-question;/* 默认增量为1 */
+}
+
+.question:before{
+	content: counter(counter-question)".";/* 添加的内容形式 */
+}
+
+h2{
+	margin-left: 10px;
+}
+.wrap{
+	margin: 20px;
+}
+
+p{
+	margin: 5px;
+	padding: 0;
+}
+ .answer p{
+ 	text-indent: 32px;
+ }
+pre{
+	text-indent: 32px;
+	margin: 5px;
+	font-size: 14px;
+	display: inline-block;
+}

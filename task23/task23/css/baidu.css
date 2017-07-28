@@ -1,0 +1,201 @@
+html,body,div,p,ul,li,img,form,input,button,span{
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+}
+html,body{
+	height: 100%;
+}
+
+/* wrapper:让整个页面稳定 */
+#wrapper{
+	position: relative;
+	height: 100%;
+	min-width: 810px;
+	min-height: 600px;
+}
+
+/* header */
+
+/* normal */
+header{
+	float: right;
+	margin: 19px 5px 5px 0;
+}
+
+header li{
+	list-style: none;
+	font-size: 13px;
+	
+}
+
+nav > ul > li{
+	display: inline-block;
+}
+
+nav > ul > li > a{
+	color: #000;
+	margin-left: 20px;
+	font-weight: bold;
+}
+
+nav li.login a,nav li.setting a{
+	font-weight: normal;
+}
+
+
+/* more produce */
+header .more{
+	position: relative;
+}
+
+header .more > a{
+	display: block;
+	width: 60px;
+	height: 23px;
+	text-align: center;
+	line-height: 24px;
+	font-weight: normal;
+	margin-left: 20px;
+	color: #fff;
+	background-color: rgb(51, 136, 255);
+}
+header .more:hover{
+	background-color: #fff;
+}
+
+/* more produce list */
+header .more:hover .more-list{
+	display: block;
+}
+
+header .more:hover a{
+	background-color: #fff;
+	color: #000;
+	text-decoration: none;
+}
+
+header .more-list{
+	position: absolute;
+	z-index: 100;
+	top: 23px;
+	right: 0px;
+	border: 1px solid #ccc;
+	text-align: center;
+	display: none;
+}
+
+header .more-list a{
+	color: #999;
+	text-decoration: none;
+}
+header .more-list a:hover{
+	text-decoration: underline;
+}
+
+header .more-list li{
+	margin: 15px;
+}
+
+header .more-list span{
+	display: block;
+}
+
+header li.all{
+	margin: 15px 5px;
+}
+
+#logo{
+	width: 270px;
+	height: 129px;
+}
+
+
+/* content */
+#content{
+	text-align: center;
+	clear: both;
+}
+#content form{
+	width: 602px;
+	margin: 10px auto;
+}
+
+#content .text-area input{
+	height: 38px;
+	width: 500px;
+    border: 1px solid #ccc;
+    text-indent: 7px;
+    outline: none;
+}
+
+#content .text-area input:hover{
+	border-color: #999;
+}
+
+#content .text-area input:focus{
+	border-color: #38f;
+}
+
+#content .text-area{
+	position: relative;
+	float: left;
+	display: inline-block;
+	/* vertical-align: bottom; */
+}
+
+#content .car-btn{
+	position: absolute;
+	right: 11px;
+	top: 50%;
+	margin-top: -8px;
+	background-image: url(../img/camera.png);
+	width: 18px;
+	height: 16px;
+	cursor: pointer;
+}
+
+#content .car-btn:hover{
+	background-position: 0 -20px;
+}
+
+#content .button{
+	background-color: rgb(51, 136, 255);
+	height: 40px;
+	width: 100px;
+	color: #fff;
+	font-size: 16px;
+	border: 0;
+	float: left;
+	display: inline-block;
+	/* vertical-align: bottom; */
+}
+
+
+/* footer */
+footer{
+	position: absolute;
+	bottom: 47px;
+	width: 100%;
+	text-align: center;
+}
+footer .qrcodeCon{
+	width: 60px;
+	height: 60px;
+	margin: 10px auto;
+	background-image: url(../img/zbios.png);
+}
+
+footer p{
+	color: #666;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 23px;
+}
+
+footer div a,footer div span{	
+	font-size: 12px;
+	color: #999;
+}
+
+

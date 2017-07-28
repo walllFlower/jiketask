@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row head">
+            <header class="col-lg-12 col-md-12 col-sm-12">
+                <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <div class="logo navbar-header navbar-left">
+                      <h1>ADA.<span>ADMIN</span></h1>
+                        <!-- <span>后台管理系统</span> -->
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-responsive-collapse">
+                      <!-- 小于768px时显示这个 -->
+                      <ul class="nav navbar-nav matter" >
+                        <li>
+                            <a href="#info-menu-head" data-toggle="collapse" data-parent="#accordion"><i class="fa fa-address-card"></i>&nbsp;&nbsp;&nbsp;Files</a>
+                            
+                        </li>
+                        <li><a href="#a-menu-head" data-toggle="collapse" data-parent="#accordion"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;&nbsp;Data Grid</a>
+                            
+                        </li>
+                        <li><a href="#b-menu-head" data-toggle="collapse" data-parent="#accordion"><i class="fa fa-calendar-minus-o"></i>&nbsp;&nbsp;&nbsp;Service</a>
+                            
+                        </li>
+                        <li><a href="#system-menu-head" data-toggle="collapse" data-parent="#accordion"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;System Set</a>
+                            
+                        </li>
+                        <li class="divider"></li>
+                      </ul>
+                      <!-- 小于768px时显示这个 -->
+                      <ul class="nav navbar-nav navbar-right manage">
+                          <li class="dropdown">
+                              <a class="dropdown-toggle" data-toggle="dropdown" href=""><i class="fa fa-drivers-license-o"></i>&nbsp;&nbsp;&nbsp;Admin
+                                <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href=""><i class="fa fa-drivers-license-o"></i> Admin Files</a></li>
+                                  <li><a href=""><i class="fa fa-bell-o"></i> Messages</a></li>
+                                  <li><a href=""><i class="fa fa-wrench"></i> Modify Password</a></li>
+                              </ul>
+                          </li>
+                          <li><a href=""><i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;&nbsp;Help</a></li>
+                          <li><a href=""><i class="fa fa-power-off"></i>&nbsp;&nbsp;&nbsp;Exit</a></li>
+                      </ul>
+                      
+                      <form class="navbar-form navbar-right">
+                          <div class="form-group">
+                              <input class="form-control search" type="" name="" placeholder="Search...">
+                          </div>
+                      </form>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <div class="row content">
+            <aside class="col-md-3 col-sm-3 col-lg-2 affix">
+                  <ul class="nav navbar-nav nav-pills nav-stacked" >
+                      <li class="panel">
+                          <a href="#info-menu" data-toggle="collapse" data-parent="#accordion"><i class="fa fa-address-card"></i>&nbsp;&nbsp;&nbsp;Files<span class="caret"></span></a>
+                          <ul id="info-menu" class="nav nav-pills nav-stacked collapse sub-menu">
+                              <li><a href="">Staff Info</a></li>
+                              <li><a href="">Client Info</a></li>
+                              <li><a href="">Vendor Info</a></li>
+                          </ul>
+                      </li>
+                      <li class="panel"><a href="#a-menu" data-toggle="collapse" data-parent="#accordion"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;&nbsp;Data Grid<span class="caret"></span></a>
+                          <ul id="a-menu" class="nav nav-pills nav-stacked collapse sub-menu">
+                              <li><a href="">员工信息</a></li>
+                              <li><a href="">客户信息</a></li>
+                              <li><a href="">供应商信息</a></li>
+                          </ul>
+                      </li>
+                      <li class="panel"><a href="#b-menu" data-toggle="collapse" data-parent="#accordion"><i class="fa fa-calendar-minus-o"></i>&nbsp;&nbsp;&nbsp;Service<span class="caret"></span></a>
+                          <ul id="b-menu" class="nav nav-pills nav-stacked collapse sub-menu">
+                              <li><a href="">员工信息</a></li>
+                              <li><a href="">客户信息</a></li>
+                              <li><a href="">供应商信息</a></li>
+                          </ul>
+                      </li>
+                      <li class="panel"><a href="#b-menu" data-toggle="collapse" data-parent="#accordion"><i class="fa fa-calendar-minus-o"></i>&nbsp;&nbsp;&nbsp;Analytics<span class="caret"></span></a>
+                          <ul id="b-menu" class="nav nav-pills nav-stacked collapse sub-menu">
+                              <li><a href="">员工信息</a></li>
+                              <li><a href="">客户信息</a></li>
+                              <li><a href="">供应商信息</a></li>
+                          </ul>
+                      </li>
+                      <li class="panel"><a href="#system-menu" data-toggle="collapse" data-parent="#accordion"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;Setting<span class="caret"></span></a>
+                          <ul id="system-menu" class="nav nav-pills nav-stacked collapse sub-menu">
+                              <li><a href="">System Set</a></li>
+                              <li><a href="">Reset</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+            </aside>
+            <article class="col-lg-offset-2 col-md-offset-3 col-sm-offset-3 col-md-9 col-sm-9 col-lg-10 col-xs-12">
+                <h2>Admin DashBoard</h2>
+                <div class="alert alert-info alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Welcome Jhon Doe!</strong> You Have <a>two pending Task</a> For Today.
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-12 col-lg-9">
+                        <div class="shortcut">
+                            <h3>SHORTCUT</h3>
+                            <div class="row">
+                              
+                                <a class="flex-item">
+                                    <i class="fa fa-coffee fa-flex"></i>
+                                </a>
+                                <a class="flex-item">
+                                    <i class="fa fa-ticket fa-flex"></i>
+                                </a>
+                                <a class="flex-item">
+                                    <i class="fa fa-calculator fa-flex"></i>
+                                </a>
+                           
+                              
+                                <a class="flex-item">
+                                    <i class="fa fa-signal fa-flex"></i>
+                                </a>
+                                <a class="flex-item">
+                                    <i class="fa fa-industry fa-flex"></i>
+                                </a>
+                                <a class="flex-item">
+                                    <i class="fa fa-picture-o fa-flex"></i>
+                                </a>
+                             
+                            </div>
+                        </div>
+                        <!-- end shortcut -->
+                        <div class="statement-table">
+                            <h3>LATEST STATEMENTS</h3>
+                            <table class="table table-hover">
+                                <tbody>
+                                    <tr>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Date</th>
+                                        <th>Earnings</th>
+                                    </tr>
+                                    <tr class="active">
+                                        <td>Lily</td>
+                                        <td>Ned</td>
+                                        <td>01/12/12</td>
+                                        <td>$610.10</td>
+                                    </tr>
+                                    <tr class="success">
+                                        <td>Jasmine</td>
+                                        <td>Miller</td>
+                                        <td>09/12/14</td>
+                                        <td>$250.50</td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>Lotus</td>
+                                        <td>Hall</td>
+                                        <td>11/09/15</td>
+                                        <td>$490.12</td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td>Rose</td>
+                                        <td>Field</td>
+                                        <td>07/02/15</td>
+                                        <td>$350.00</td>
+                                    </tr>
+                                    <tr class="info">
+                                        <td>Violet</td>
+                                        <td>Fox</td>
+                                        <td>01/22/14</td>
+                                        <td>$300.52</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- end left 9 -->
+                    <div class="col-md-4 col-sm-12 col-lg-3">
+                        <ul class="nav nav-tabs tab-title">
+                            <li class="active"><a href="#news" data-toggle="tab">News</a></li>
+                            <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                            <li><a href="#message" data-toggle="tab">Mess</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="news" class="tab-pane fade in active">
+                              <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred <strong>nesciunt sapiente</strong> ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum. </p>
+                            </div>
+                            <div id="profile" class="tab-pane fade">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum. </p>
+                              <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                            </div>
+                            <div id="message" class="tab-pane fade">
+                              <p>Messages Tab Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit <strong>eserunt mollit</strong> anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit eserunt mollit anim id est laborum. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end right 3 -->
+                </div>
+                <!-- end row -->
+            </article>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright &copy; ada.admit</p>
+    </footer>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/navCollapse.js"></script>
+
+</body>
+
+</html>

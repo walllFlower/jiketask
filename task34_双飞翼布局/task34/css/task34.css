@@ -1,0 +1,52 @@
+html,body,header,div,h1,article,aside,p{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	min-width: 810px;
+}
+
+/* 头部 */
+header{
+	background-color: #cdece9;
+}
+
+/* 内容部分：双飞翼布局 */
+.content{
+	margin: 10px 0;
+	overflow: hidden;/* 解决父元素高度为0 */
+}
+.middle{
+	float: left;
+	width: 100%;
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+}
+.main{
+	margin-left: 160px;/* 与left有10px间隙 */
+	margin-right: 160px;/* 与right有10px间隙 */
+	background-color: #cdece9;
+}
+.left{
+	float: left;
+	width: 150px;
+	background-color: #cdece9;
+	margin-left: -100%;
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+}
+.right{
+	float: left;
+	width: 150px;
+	background-color: #cdece9;
+	margin-left: -150px;
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+}
+
+/* 脚部 */
+footer{
+	clear: both;
+	background-color: #cdece9;
+}

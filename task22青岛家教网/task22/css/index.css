@@ -1,0 +1,79 @@
+html,body,p,table,tr,td,caption,footer{
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft YaHei";
+}
+
+body{
+	background: #369;
+}
+
+#wrapper{
+	width: 710px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 5px;
+	background: #fff;
+}
+
+table{
+	width: 710px;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+table caption{
+	font-size: 18px;
+	font-weight: bold;
+	margin: 10px 0;
+}
+
+table td{
+	padding: 2px;
+}
+table th{
+	text-align: left;
+	background-color: #eee;
+	color: rgb(0, 51, 153);
+	line-height: 1.5em;
+}
+
+table .intro{
+	font-weight: normal;
+	background-color: #fff;
+}
+
+table .red{
+	color: #f00;
+}
+
+table td:first-child{
+	text-align: right;
+}
+
+td p,td span{
+	color: #00f;
+}
+
+
+/* table内部的子table */
+table.inner{
+	width: 100%;
+}
+
+table.inner th{
+	color: #000;
+	background-color: #fff;
+}
+
+table.inner td{
+	text-align: left;
+}
+
+table td.submit{
+	height: 100px;
+}
+
+table td.submit,footer,table .intro{
+	text-align: center;
+}

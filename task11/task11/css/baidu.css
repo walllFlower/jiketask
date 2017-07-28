@@ -1,0 +1,52 @@
+html,body,div,p,ul,li,img,form,input,button,span{
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+}
+
+header{
+	float: right;
+	margin: 19px 0 5px 0;
+}
+
+
+header nav li{
+	list-style: none;
+	display: inline-block;
+}
+header nav a{
+	margin-left: 20px;
+}
+
+#logo{
+	width: 270px;
+	height: 129px;
+}
+#content{
+	text-align: center;
+	clear: both;
+}
+
+#content form input{
+	height: 34px;
+	width: 500px;
+	/* margin: 7px 0 0 6px; */
+}
+
+#content form button{
+	height: 38px;
+	width: 100px;
+}
+
+footer{
+	position: absolute;
+	bottom: 47px;
+	width: 100%;
+}
+
+footer div{
+	text-align: center;
+	font-size: 12px;
+}
+
+

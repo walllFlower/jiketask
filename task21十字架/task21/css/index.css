@@ -1,0 +1,47 @@
+div{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 50%;
+	top: 50%;
+	-moz-box-shadow: 0px 0px 20px #aaa;
+	-webit-box-shadow: 0px 0px 20px #aaa;
+	box-shadow: 0px 0px 20px #aaa; /* 水平，垂直阴影为0，使其四周都有阴影 */
+}
+
+/* 中心 */
+#icon{
+	margin-left: -50px;
+	margin-top: -50px;
+	text-align: center;
+	line-height: 100px;
+	
+}
+
+#icon img{
+	height: 64px;
+	width: 64px;
+	vertical-align: middle;
+}
+
+/* 十字架 */
+#left{
+	background-color: #f00;
+	margin-left: -150px;
+	margin-top: -50px;
+}
+#right{
+	background-color: #0f0;
+	margin-left: 50px;
+	margin-top: -50px;
+}
+#top{
+	background-color: #f0f;
+	margin-top: -150px;
+	margin-left: -50px;
+}
+#bottom{
+	background-color: #ff0;
+	margin-top: 50px;
+	margin-left: -50px;
+}

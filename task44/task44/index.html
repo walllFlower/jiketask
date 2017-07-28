@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>初级前端面试题</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+	<h2>Web前端初级面试题汇总</h2>
+    <div class="wrap">
+        <h3 class="question">html5有哪些新特性? 如何处理HTML5新标签的浏览器兼容问题?</h3>
+        <div class="answer">
+            <p>html5新特性：</p>
+            <ol>
+                <li>语意化更好的内容元素，比如 article、footer、header、nav、section</li>
+                <li>新的表单控件，如calendar、date、time、email、url、search</li>
+                <li>绘画 canvas</li>
+                <li>用于媒介回放的 video 和 audio 元素</li>
+                <li>本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失</li>
+                <li>新的技术webworker, websocket, Geolocation</li>
+            </ol>
+            <p>html5新标签浏览器兼容：</p>
+            <ol>
+                <li>IE8/IE7/IE6支持通过document.createElement方法产生的标签， 可以利用这一特性让这些浏览器支持HTML5新标签， 浏览器支持新标签后，还需要添加标签默认的样式
+                </li>
+                <li>直接使用成熟的框架、比如html5shim</li>
+            </ol>
+        </div>
+    </div>
+    <div class="wrap">
+        <h3 class="question">Doctype作用?标准模式与兼容模式各有什么区别?</h3>
+        <div class="answer">
+            <p>Doctype作用：</p>
+            <p><pre>&lt;!DOCTYPE&gt;</pre>告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。</p>
+            <p>标准模式与兼容模式：</p>
+            <p>标准模式的排版和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。</p>
+        </div>
+    </div>
+    <div class="wrap">
+        <h3 class="question">清除浮动的几种方法</h3>
+        <div class="answer">
+            <ol>
+                <li>父级div定义 height(只适合高度固定的布局)</li>
+                <li>结尾处加空div标签 clear:both(实际上父元素的高度任然为0)</li>
+                <li>父级div定义 伪类:after和zoom(两句代码结合使用才能让主流浏览器都支持,推荐使用,建议定义公共类)</li>
+                <li>父级div定义 overflow:hidden</li>
+                <li>父级div定义 overflow:auto</li>
+                <li>父级div也浮动,需要定义宽度</li>
+                <li>父级div定义 display:table</li>
+                <li>父级div定义display:table</li>
+            </ol>
+        </div>
+    </div>
+    <div class="wrap">
+        <h3 class="question">元素垂直居中几种方法</h3>
+        <div class="answer">
+            <ol>
+            	<li>使用绝对定位加上margin负值居中(也可用translate平移)。这种情况需要元素的高度已知。</li>
+            	<li>伸缩盒模型: 父元素使用display:flex,并设置align-items和justify-content为center。</li>
+            	<li>父元素应用display:table,子元素设置display:table-cell和和vertical-align:middle。(不推荐)
+            	</li>
+            	<li>块级元素设置line-height可以让内部的单行文本垂直居中。如果内部是img元素，则添加vertical-align垂直居中</li>
+            	<li>父元素使用:after使inline-box子元素垂直居中</li>
+            </ol>
+        </div>
+    </div>
+    <div class="wrap">
+        <h3 class="question">CSS隐藏元素的几种方法</h3>
+        <div class="answer">
+            <ol>
+                <li>opacity: 元素本身依然占据它自己的位置并对网页的布局起作用。它也将响应用户交互</li>
+                <li>visibility: 与opacity 唯一不同的是它不会响应任何用户交互。此外，元素在读屏软件中也会被隐藏</li>
+                <li>display: 设为none任何对该元素直接的用户交互操作都不可能生效。此外,读屏软件也不会读到元素的内容。浏览器不对改元素进行渲染</li>
+                <li>position: 不会影响布局，能让元素保持可以操作</li>
+            </ol>
+        </div>
+    </div>
+    <div class="wrap">
+        <h3 class="question">CSS Sprite是什么?谈谈这个技术的优缺点？</h3>
+        <div class="answer">
+            <p>CSS sprites在国内很多人叫css精灵,是一种网页图片应用处理方式。它允许你将一个页面涉及到的所有零星图片都包含到 中去,减少对服务器的请求次数,提高访问速度。</p>
+            <p>优点：</p>
+            <ol>
+                <li>利用CSS Sprites能很好地减少了网页的http请求,从而大大的提高了页面的性能,这也是CSS Sprite的优点,也是其被广泛传播和应用的主要原因。</li>
+                <li>解决了网页设计师在图片命名上的困扰,只需对一张集合的图片上命名就可以了,不需要对每一个小元素命名,从而提高了网页的制作效率。</li>
+                <li>换风格方便,只需要在一张或少张图片上修改图片的颜色或样式,整个网页的风格就可以改变。维护起来也很方便。</li>
+            </ol>
+            <p>缺点：</p>
+            <ol>
+                <li>在图片合并的时候,你要把多张图片有序的合理的合并成一张图片,还要留好足够的空间,防止板块内显示不必要的背景。这些还好,最痛苦的是在宽屏,高分辨率的屏幕下的自适应页面,你的图片如果不够宽,很容易将背景断裂。</li>
+                <li>CSS Sprites在开发的时候比较麻烦,你要通过photoshop或其他工具测量计算每一个背景单元的精确位是针线活,没什么难度,但是很繁琐。</li>
+                <li>CSS Sprites在维护的时候比较麻烦,如果页面背景有少许改动,一般就要改这张合并的图片无需改的最好不要动,这样避免改动更多的css,如果在原来的地方放不下,又只能（最好）往下加图片,这样图片的字加了,还要改动css</li>
+            </ol>
+        </div>
+    </div>
+    <div class="wrap">
+        <h3 class="question">CDN（内容分发网络）是什么?如何使用jQuery CDN?</h3>
+        <div class="answer">
+            <p>在开发Web页面，考虑最多的问题之一是页面在客户端电脑的响应：时间越短，用户体验越好。 而制约用户体验的关键因素之一是浏览器下载Web文件大小，包括*.html、图片、*.js、*.css等文件。 为了最大化复用和节约带宽，故CDN应运而生：其基本思路是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。其目的是使用户可就近取得所需内容，解决 Internet网络拥挤的状况，提高用户访问网站的响应速度。</p>
+            <p>使用官方的CDN节点:</p>
+            <p><pre>&lt;script src="//code.jquery.com/jquery-1.11.0.min.js"&gt;&lt;/script&gt;</pre></p>
+            <p>Google提供的jQuery CDN：</p>
+            <p><pre>&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;</pre></p>
+			<p>微软也提供了jQuery CDN的节点：</p>
+            <p><pre>&lt;script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.9.1.min.js"&gt;&lt;/script&gt;</pre></p>
+        </div>
+    </div>
+</body>
+
+</html>
