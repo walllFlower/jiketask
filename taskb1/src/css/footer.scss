@@ -1,0 +1,181 @@
+$theme-color:#35B558;
+$text-color:#999;
+
+dl,dt,dd{
+	margin: 0;
+	padding: 0;
+}
+footer{
+	min-width: 1000px;
+    border-top: 1px solid #e4e4e4;
+    background: #fff;
+    margin-top: 50px;
+    .jk-info-block{
+		background: #fff;
+		.jk-info{
+			position: relative;
+		    width: 1000px;
+		    height: 215px;
+		    margin: 0 auto;
+		    border-bottom: 1px solid #f5f5f5;
+		    padding-left: 224px;
+		    padding-top: 25px;
+		    box-sizing: border-box;
+		    .jk-logo{
+			    position: absolute;
+			    left: 0;
+			    top: 25px;
+			    display: inline-block;
+			    width: 160px;
+			    img{
+				    width: 109px;
+				    height: 40px;
+				    display: block;
+				}
+				p{
+				    font-size: 12px;
+				    color: $text-color;
+				    margin-top: 20px;
+				}
+			}
+			dl{
+				width: 135px;
+			    color: #808080;
+			    float: left;
+			}
+			dt{
+				font-size: 14px;
+			    line-height: 30px;
+			}
+			dd{
+				font-size: 12px;
+			    line-height: 30px;
+				a{
+				    color: $text-color;
+				}
+			}
+			.jk-down{
+				position: absolute;
+			    right: 0;
+			    top: 25px;
+			    display: inline-block;
+			    width: 175px;
+			    text-align: left;
+			    p{
+					color: #808080;
+				    font-size: 14px;
+				    margin-bottom: 20px;
+				}
+				.down-con{
+					position: relative;
+				    display: inline-block;
+				    width: 140px;
+				    height: 30px;
+				    border: 1px solid #eeeeee;
+				    margin-bottom: 10px;
+				    line-height: 30px;
+				    color: #808080;
+				    font-size: 13px;
+				    padding-left: 40px;
+				    cursor: pointer;
+				    img{
+						display: none;
+						position: absolute;
+					    width: 115px;
+					    height: 153px;
+					    position: absolute;
+					    top: -157px;
+					    left: 12px;
+					    z-index: 2;
+					    display: none;
+					}
+					&:hover img{
+						display: block;
+					}
+					.down-ios{
+					    background: url(../img/icon-down-ios.png)no-repeat 0 0;
+					    background-size: 30px 30px;
+					}
+					.down-and{
+						background: url(../img/icon-down-and.png)no-repeat 0 0;
+					    background-size: 30px 30px;
+					}
+				}//down-con
+			}//jike-down
+		}//jike-info
+	}//jike-info-block
+	.copyright{
+	    font-size: 12px;
+	    color: $text-color;
+	    margin: 0 auto;
+	    width: 1000px;
+	    text-align: center;
+	    padding: 15px 0;
+	    a{
+			color: #999;
+			font-weight: normal;
+			&:hover{
+				color:$theme-color;
+			}
+		}
+		.down-wechat,.down-sina{
+			float: right;
+		    height: 15px;
+		    width: 20px;
+		}
+		.down-wechat{
+		    background: url(../img/icon-down-wechat.png)no-repeat 0 0;
+		    background-size: 18px 15px;
+		}
+		.down-sina{
+		    background: url(../img/icon-down-sina.png)no-repeat 0 0;
+		    background-size: 18px 15px;
+		}
+		.down-szfw{
+		    display: block;
+		    margin: 15px auto 0;
+		    img{
+				width: 60px;
+			}
+		}
+	}//copyright
+}//footer
+
+.gotop{
+    position: fixed;
+    left: 50%;
+    margin-left: 510px;
+    bottom: 50px;
+    width: 34px;
+    text-align: center;
+    z-index: 2000;
+    a{
+	    position: relative;
+	    display: block;
+	    background: #f7f7f7 url(../img/phone-1.png) center center no-repeat;
+	    background-size: 12px 24px;
+	    width: 34px;
+	    height: 35px;
+	    border-bottom: 1px solid #e0e0e0;
+	    &:hover .jk-app{
+	    	position: absolute;
+		    background: url(../img/appewm.png) 0 0 no-repeat;
+		    background-size:100%; 
+		    width: 126px;
+		    height: 159px;
+		    top: -71px;
+		    left: -128px;
+	    }
+	}//a
+	.top{
+	    display: block;
+	    background: url(../img/gotop.jpg) 0 0 no-repeat;
+	    background-size: 34px 103px;
+	    width: 34px;
+	    height: 34px;
+	    &:hover{
+	    	background: url(../img/gotop2.jpg) 0 0 no-repeat;
+		    background-size: 34px 103px;
+	    }
+	}
+}

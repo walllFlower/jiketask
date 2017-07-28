@@ -1,0 +1,46 @@
+.top-wrap{
+	overflow: hidden;
+	/* background-color: #f00; */
+}
+.s-upfunc-menus{
+	float: left;
+}
+
+.s-weather-wrapper,.s-icons{
+	float: left;
+}
+
+.s-upfunc-menus .s-weather-wrapper{
+	margin-left: 15px;
+}
+
+.s-upfunc-menus .s-weather-wrapper a,
+.s-icons a{
+	color: #555;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.s-weather-wrapper .weather-icon{
+	display: inline-block;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	background: url(../img/a7.png) 0 0 no-repeat;
+	margin-right: 5px;
+}
+
+.s-weather-wrapper .pollution em{
+	font-weight: bold;
+	color: #fea700;
+	font-style: normal;
+	margin:0 7px;
+}
+
+.s-weather-wrapper .vertical{
+	margin-right: 5px;
+}
+
+.right-menu{
+	float: right;
+}

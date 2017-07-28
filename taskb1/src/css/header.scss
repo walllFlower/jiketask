@@ -1,0 +1,431 @@
+$theme-color:#35B558;
+
+html,body,header,nav,div,ul,li,a,span,i,dl,p,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+    font-family: Verdana,"Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,sans-serif;
+}
+
+body{
+	background-color: #f5f5f5;
+}
+ul{	
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+@-webkit-keyframes listshow {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes listshow {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes listshow {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@mixin bcg($url,$width,$height){
+	background:$url 0 0 no-repeat;
+	-moz-background-size:$width $height;
+		 background-size:$width $height;
+}
+
+@mixin arrow($width,$height,$top,$right){
+	content:'';
+	position:absolute;
+	z-index:1200;
+	width:$width;
+	height:$height;
+	display:block;
+	top:$top;
+	right:$right;
+}
+
+header{
+    height: 60px;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    .header-wrap{
+		position: relative;
+	    width: 1000px;
+	    margin: 0 auto;
+	    height: 60px;
+	    line-height: 60px;
+	    .logo{
+		    float: left;
+		    width: 109px;
+		    height: 60px;
+		    display: inline-block;
+		    margin-right: 60px;
+		    & > img{
+				float: left;
+				margin-top: 10px;
+				height: 40px;
+				width: 109px;
+				border: 0 none;/* 为什么写两个 */
+			}
+		}//logo
+		.header-nav{
+			li{
+			    float: left;
+				position: relative;
+			    height: 60px;
+			    font-size: 14px;
+			    display: inline-block;/* 浮动已达到效果了？ */
+			    margin-right: 50px;
+			    cursor: pointer;
+			    &:first-child a{
+					color: $theme-color;
+				    text-decoration: none;
+				}
+			    &:hover{
+			    	color: $theme-color;
+			    }
+			    &.list{
+					&:after{
+						@include arrow($width:8px,$height:8px,$top:24px,$right:-16px);
+						border-bottom: 1px solid #ccc;
+						border-left: 1px solid #ccc;
+						-webkit-transform: rotate(-45deg);
+						   -moz-transform: rotate(-45deg);
+						    -ms-transform: rotate(-45deg);
+						        transform: rotate(-45deg);
+					}
+					&:hover:after{
+						border-color:$theme-color;
+						top: 28px;
+						-webkit-transform: rotate(135deg);
+						   -moz-transform: rotate(135deg);
+						    -ms-transform: rotate(135deg);
+						        transform: rotate(135deg);
+						-webkit-transition: top .3s ease-in,-webkit-transform .3s ease-in;
+						transition: top .3s ease-in,-webkit-transform .3s ease-in;
+						-moz-transition: transform .3s ease-in,top .3s ease-in,-moz-transform .3s ease-in;
+						transition: transform .3s ease-in,top .3s ease-in;
+						transition: transform .3s ease-in,top .3s ease-in,-webkit-transform .3s ease-in,-moz-transform .3s ease-in;
+					}
+					&:hover .sub-menu{
+						display: block;
+						opacity: 1;
+						-webkit-animation: listshow 0.8s ease normal;
+						   -moz-animation: listshow 0.8s ease normal;
+						        animation: listshow 0.8s ease normal;
+					}
+
+			    }
+			}//li
+			.sub-menu{
+				display: none;
+				opacity: 0;
+				position: absolute;
+				z-index: 1000;
+				top: 60px;
+				left: 0;
+				background: #fff;
+				font-size: 12px;
+				color: #666;
+				width: 280px;
+				a{
+				    display: block;
+				    white-space: normal;
+				    padding: 0 15px;
+				    color: #666;
+				}
+			}
+
+			.school-menu{
+				h3{
+					margin: 10px 0;
+				    padding: 0 15px;
+				    background: #fafafa;
+				    height: 28px;
+				    line-height: 28px;
+				    font-weight: 300;
+				    font-size: 100%; 
+				}
+				a{
+					height: 30px;
+				    line-height: 30px;
+				    padding: 0 15px;
+
+				}
+				i{
+					@include bcg(url(../img/allicon4.png),16px,148px);
+				    display: inline-block;
+				    width: 14px;
+				    height: 14px;
+				    margin-right: 10px!important;
+				    &.web-icon{
+						@include bcg(url(../img/allicon.png),64px,64px);
+						background-position: -15px -27px;
+					}
+					&.wechat-icon{
+						background-position: -2px -60px;
+					}
+					&.python-icon{
+						background-position: -2px -2px;
+					}
+					&.go-icon{
+						background-position: -2px -38px;
+					}
+					&.android-icon{
+						@include bcg(url(../img/allicon.png),64px,64px);
+						background-position: -45px -14px;
+					}
+					&.ios-icon{
+						background-position: -2px -82px;
+					}
+
+				}
+			}//school-menu
+			.vip-lesson{
+				a{
+					display: block;
+				    height: 40px;
+				    line-height: 40px;
+				}
+				span{
+					color: #bbb;
+				    float: right;
+				    white-space: nowrap;
+				    text-decoration: none;
+				    padding: 0px;
+				    margin: 0px;
+				    vertical-align: middle;
+				    -moz-box-sizing: border-box;
+				         box-sizing: border-box;/* 为什么用这个？ */
+				}
+				i{
+					/* 默认使用的雪碧图 */
+					@include bcg(url(../img/allicon.png),64px,64px);
+				    display: inline-block;
+				    width: 14px;
+				    height: 14px;
+				    margin-right: 10px!important;
+				    margin-left: 5px;
+				    &.kck-icon{
+						background-position: 0 -13px;
+					}
+					&.zyljt-icon{
+						background-position: -45px 0;
+					}
+					&.zstxt-icon{
+						background-position: -30px -13px;
+					}
+					&.xlkc-icon{
+						@include bcg(url(../img/xlkc2.png),12px,12px);
+						background-position: 0 0;
+					}
+					&.kcbq-icon{
+						background-position: -15px -13px;
+					}
+					&.vip-icon{
+						background-position: -16px 0;
+					}
+
+					&.jswd-icon{
+						background-position: 0 -27px;
+					}
+					&.wiki-icon{
+						background-position: -29px -27px;
+					}
+					&.sq-icon{
+						background-position: 0 2px;
+					}
+					&.zygx-icon{
+						background-position: -30px 0;
+					}
+				}
+
+			}//vip-lesson
+		}//header-nav
+		.icon-box{
+			float: right;
+			span{
+			    height: 60px;
+			    width: 17px;
+			    display: inline-block;
+			    margin-left: 25px;
+			    cursor: pointer;
+			    &.search-icon{
+				     @include bcg(url(../img/search-icon.png),17px,17px);
+					background-position: 0;/* 为什么 */
+				}
+				&.app-icon{
+					position: relative;
+					@include bcg(url(../img/app-icon.png),17px,17px);
+					background-position: 0;
+					.sub-menu{
+						display: none;
+						opacity: 0;
+						background: #fff;
+						position: absolute;
+						width: 120px;
+						z-index: 1200;
+						top: 60px;
+						right: -50px;
+						padding: 0;
+						&:after{
+							@include arrow($width:15px,$height:15px,$top:-8px,$right:51px);
+							border-top:1px solid #ececec;
+							border-left:1px solid #ececec;
+							-webkit-transform: rotate(45deg);
+							   -moz-transform: rotate(45deg);
+							    -ms-transform: rotate(45deg);
+							        transform: rotate(45deg);
+						}
+					}
+					&:hover .sub-menu{
+						display: block;
+						opacity: 1;
+						-webkit-animation: listshow 0.8s ease normal;
+						   -moz-animation: listshow 0.8s ease normal;
+						        animation: listshow 0.8s ease normal;
+				    }
+				    img{
+						width: 100%;
+					}
+				}//app-icon
+				&.login-icon{
+					position: relative;
+				    height: 60px!important;
+				    width: 25px!important;
+				    a img{
+					    width: 25px;
+					    height: 25px;
+					    margin-top: 13px;
+					    display: block;
+					    -moz-border-radius: 50%;
+					         border-radius: 50%;
+					    border: 1px solid #ddd;
+					    overflow: hidden;	
+					}
+					i.year-vip{
+						position: absolute;
+						@include bcg(url(../img/allicon2.png),64px,64px);
+					    background-position: -1px -32px;
+					    width: 13px;
+					    height: 13px;
+					    margin-right: 10px;
+					    display: inline-block;
+					    top: 28px;
+					    left: 15px;
+					}
+					.sub-menu{
+						position: absolute;
+						display: none;
+						opacity: 0;
+						padding: 10px 0;
+						width: 120px;
+						top: 60px;
+						right: -10px;
+						cursor: pointer;
+						background: #fff;
+						&:after{
+							@include arrow($width:15px,$height:15px,$top:-8px,$right:13px);
+							border-top:1px solid #ececec;
+							border-left:1px solid #ececec;
+							-webkit-transform: rotate(45deg);
+							   -moz-transform: rotate(45deg);
+							    -ms-transform: rotate(45deg);
+							        transform: rotate(45deg);
+						}
+						dd{
+							text-align: left;
+							font-size: 12px;
+							line-height: 35px;
+							padding-left: 10px;
+							margin: 0;
+							a{
+							    display: block;
+							    color: #666;
+							    height: 35px;
+							    line-height: 35px;
+							    &.rzno-vip{
+									margin-right: 10px;
+								    display: inline-block;
+								    vertical-align: middle;
+								    width: 45px;
+								    height: 14px;
+									@include bcg(url(../img/rz-no.png),45px,14px);
+								}
+								&.year-vip{
+									@include bcg(url(../img/allvipicon.png),306px,16px);
+								    background-position: -143px -1px;
+								    display: inline-block;
+								    vertical-align: middle;
+								    width: 45px;
+								    height: 14px;
+								}
+							}
+							&:hover{
+								background: #f1f1f1;
+								a{
+									color: $theme-color;
+								}
+							}
+							.user-level:after{
+							    content:"";
+							    display:inline-block;
+							    height:100%;
+							    vertical-align:middle;
+							}
+						}//ddd
+					}//sub-menu
+					&:hover .sub-menu{
+						display: block;
+						opacity: 1;
+						-webkit-animation: listshow 0.8s ease normal;
+					    -moz-animation: listshow 0.8s ease normal;
+					        animation: listshow 0.8s ease normal;
+					}
+					i{
+						@include bcg(url(../img/allicon2.png),64px,64px);
+					    width: 12px;
+					    height: 12px;
+					    margin-right: 10px;
+					    display: inline-block;
+						&.xxzx-icon{
+							background-position: -16px -15px;
+						}
+						&.grzy-icon{
+							background-position: -45px -1px;
+						}
+						&.xxtz-icon{
+							background-position: -16px -30px;
+						}
+						&.zhsz-icon{
+							background-position: -30px -1px;
+						}
+						&.tc-icon{
+							background-position: -16px -1px;
+						}
+					}
+				}//login-icon
+			}//icon-box span
+		}//icon-box
+	}//header-wrap
+}
+
