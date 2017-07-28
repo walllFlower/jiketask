@@ -1,0 +1,18 @@
+html{
+	*overflow-y: hidden;/*IE7产生滚动条*/
+}
+
+nav > ul > li{
+	*zoom:1;
+	*display:inline;/*IE7及以下block元素转inline-block*/
+}
+
+.more-list img{
+	border-style:none;/*IE10及以下消除图片边框*/
+}
+
+#content .text-area input{
+	float: left;/*IE7解决input上边距*/
+	line-height: 38px;/*IE8及以下*/
+	display:block;/*IE7及以下解决text-indent兼容问题*/
+}

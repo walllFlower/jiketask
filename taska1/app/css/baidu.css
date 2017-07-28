@@ -1,0 +1,379 @@
+html,
+body,
+div,
+p,
+ul,
+li,
+img,
+form,
+input,
+button,
+span,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+html,
+body {
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+li{
+    list-style-type: none;
+}
+
+/* wrapper:让整个页面稳定 */
+
+#wrapper {
+    position: relative;
+    height: 100%;
+    min-width: 810px;
+    min-height: 600px;
+}
+
+
+/* header */
+
+
+/* normal */
+
+@media screen and (min-width: 600px) {
+    header {
+        width: 100%;
+        height: 34px;
+        line-height: 34px;
+        /* margin: 19px 0px 5px 0; */
+    }
+}
+
+header li {
+    list-style: none;
+    font-size: 13px;
+}
+
+header .top-wrap{
+    border-bottom: 1px solid #ebebeb;
+}
+
+header .top-wrap-bcg{
+    position: absolute;
+    top: -35px;
+    z-index: -5;
+    height: 35px;
+    width: 100%;
+    background: #000;
+    opacity: 0.2;
+}
+
+.top-wrap.has-bcg{
+    border-bottom: 0;
+}
+
+.top-wrap.has-bcg a,
+.top-wrap.has-bcg span{
+    color: #fff;
+}
+
+#userinfo-wrap {
+    display: none;
+    position: relative;
+}
+
+#userinfo-wrap .icon-login {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/icon-login.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.pub-nav > li {
+    display: inline-block;
+}
+
+.pub-nav > li > a {
+    color: #000;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.pub-nav li.login a,
+.pub-nav li.setting a {
+    font-weight: normal;
+}
+
+
+/* setting list */
+.pub-nav li.setting {
+    /* position: relative; */
+}
+
+.pub-nav li.setting:hover .setting-list {
+    display: block;
+}
+
+.pub-nav ul.setting-list {
+    position: absolute;
+    top: 35px;
+    display: none;
+    width: 70px;
+    font-size: 12px;
+    border: 1px solid #d1d1d1;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 5px #d1d1d1;
+    -moz-box-shadow: 1px 1px 5px #d1d1d1;
+    -ms-box-shadow: 1px 1px 5px #d1d1d1;
+    box-shadow: 1px 1px 5px #d1d1d1;
+}
+
+
+/* small triangle */
+
+.pub-nav .setting-list:before,
+.pub-nav .setting-list:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    bottom: 100%;
+}
+
+.pub-nav .setting-list:before {
+    border: 7px solid transparent;
+    border-bottom: 7px solid #d1d1d1;
+    left: 27px;
+}
+
+.pub-nav .setting-list:after {
+    border: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+    left: 29px;
+}
+
+.pub-nav .setting-list a {
+    display: block;
+    text-decoration: none;
+    padding: 0 9px;
+    margin: 0;
+    height: 26px;
+    line-height: 26px;
+    color: #000;
+}
+
+.pub-nav .setting-list a:hover {
+    background-color: #3385ff;
+    color: #fff;
+}
+
+
+/* more produce */
+
+.pub-nav li.more {
+    /* position: relative; */
+}
+
+.pub-nav li.more > a {
+    display: inline-block;
+    /*block修改而来，解决*/
+    width: 60px;
+    height: 23px;
+    text-align: center;
+    line-height: 24px;
+    font-weight: normal;
+    margin-left: 20px;
+    margin-right: 5px;
+    color: #fff;
+    background-color: rgb(51, 136, 255);
+}
+
+
+/* more produce list */
+
+header .more.more-list {
+    display: block;
+    color: #999;
+}
+
+header .more .title a {
+    text-decoration: none;
+    color: #000!important;
+}
+
+header .more-list li.title {
+    margin: 0;
+}
+
+header .more-list .title a {
+    display: inline-block;
+    /*block修改而来，解决*/
+    width: 66px;
+    text-align: center;
+    padding-top: 13px;
+    line-height: 35px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+}
+
+header .more-list {
+    position: absolute;
+    z-index: 100;
+    top: -23px;
+    right: 0px;
+    width: 66px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-left: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+    display: none;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+    overflow: hidden;
+}
+
+header .more-list img {
+    border-style: none;
+}
+
+header .more-list a {
+    color: #999!important;
+    text-decoration: none;
+}
+
+header .more-list a:hover {
+    text-decoration: underline;
+}
+
+header .more-list li {
+    margin: 15px;
+    border-bottom: #f0f0f0 1px solid;
+}
+
+header .more-list span {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    color: #999!important;
+
+}
+
+header li.all {
+    margin: 15px 5px;
+}
+
+
+/* content */
+
+#logo {
+    padding-top: 2px;
+    width: 269px;
+    height: 129px;
+}
+
+#content {
+    text-align: center;
+    clear: both;
+}
+
+#content form{
+    overflow: hidden;
+}
+
+@media screen and (min-width: 600px) {
+    #content form ,
+    .search-container form{
+        width: 602px;
+        margin: 10px auto;
+    }
+    .text-area input {
+        height: 38px;
+        width: 500px;
+        border: 1px solid #ccc;
+        text-indent: 7px;
+        display: inline-block;
+        outline: none;
+    }
+    .text-area input:hover {
+        /*border-color: #999;*/
+    }
+    .text-area input:focus {
+        border-color: #38f;
+        /*IE7及以下不支持*/
+    }
+    .text-area {
+        position: relative;
+        float: left;
+        display: inline-block;
+    }
+    /*camera*/
+    .car-btn {
+        position: absolute;
+        right: 11px;
+        top: 50%;
+        margin-top: -8px;
+        background-image: url(../img/camera.png);
+        width: 18px;
+        height: 16px;
+        cursor: pointer;
+    }
+    .car-btn:hover {
+        background-position: 0 -20px;
+    }
+    .baiduappcall-wrap {
+        display: none;
+    }
+    .button {
+        background-color: rgb(51, 136, 255);
+        height: 40px;
+        width: 100px;
+        color: #fff;
+        font-size: 16px;
+        border: 0;
+        float: left;
+        display: inline-block;
+    }
+    #content .ns-swipe-wrap {
+        display: none;
+    }
+    .news-list-con{
+        display: none;
+    }
+}
+
+
+/* endmedia */
+
+
+/* footer */
+@media screen and (min-width: 600px) {
+    footer {
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+footer .qrcodeCon {
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+    background-image: url(../img/zbios.png);
+}
+
+footer p {
+    color: #666;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 23px;
+}
+
+footer div a,
+footer div span {
+    font-size: 12px;
+    color: #999;
+}
