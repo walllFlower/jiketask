@@ -1,0 +1,17 @@
+html,body,div,img{
+	margin:0;
+	padding:0;
+}
+
+.box{
+	position: relative;
+	float:left;
+}
+.content{
+	border:1px solid #ececec;
+	padding:10px 10px 15px;
+}
+.content img{
+	width: 188px;
+	height:auto;
+}

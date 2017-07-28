@@ -1,0 +1,840 @@
+.pager-wrap{
+	width: 1000px;
+	margin: 0 auto;
+	clear: both;
+	margin-bottom: 40px;
+	margin-top: 20px;
+	overflow: hidden;/* 父元素高度为0：暂时用这个方法解决 */
+	/* zoom: 1; */
+} 
+.pager-wrap .jk-banner{
+	height: 330px;
+    width: 750px;
+    background: #f5f5f5;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+}
+.pager-wrap .jk-banner img{
+
+}
+
+/* pager login */
+.pager-wrap .jk-login{
+    float: left;
+    width: 240px;
+    height: 160px;
+    border: 1px solid #e9e9e9;
+    background: #fff;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    padding: 26px 29px 24px
+}
+
+.pager-wrap .jk-login .user-info{
+	height: 57px;
+}
+
+.pager-wrap .jk-login .user-info img{
+    float: left;
+    width: 57px;
+    height: 57px;
+    -moz-border-radius: 50%;
+         border-radius: 50%;
+    margin-right: 15px;
+}
+
+.pager-wrap .jk-login .user-info span{
+	float: left;
+    font-size: 12px;
+    color: #555;
+    line-height: 16px;
+    height: 16px;
+    width: 108px;
+    margin-top: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.pager-wrap .jk-login .user-status{
+    float: left;
+    font-size: 12px;
+    color: #555;
+    line-height: 16px;
+    height: 16px;
+    width: 108px;
+    margin-top: 10px;	
+}
+
+.pager-wrap .jk-login .ca{
+    background: #ccc;
+    display: inline-block;
+    width: 50px;
+    height: 15px;
+    color: #fff;
+    text-align: center;
+    -moz-border-radius: 8px;
+         border-radius: 8px;
+    margin-right: 5px;
+}
+.pager-wrap .jk-login .vip{
+    display: inline-block;
+    width: 40px;
+    height: 15px;
+    background: #912dca;
+    color: #fff;
+    text-align: center;
+    -moz-border-radius: 8px;
+         border-radius: 8px;	
+}
+.pager-wrap .jk-login .my-zoom{
+ 	display: block;
+ 	margin-top: 20px;
+	width: 180px;
+	height: 32px;
+	font-size: 14px;
+	border:1px solid #35b558;
+	-moz-border-radius: 2px;
+	     border-radius: 2px;
+	color: #35b558;
+	line-height: 30px;
+	text-align: center;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+.pager-wrap .jk-login .my-zoom:hover{
+	background: #35b558;
+	color: #fff;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+
+.pager-wrap .jk-activi{
+	float: left;
+    width: 240px;
+    height: 160px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+/* pager online course */
+.pager-wrap .jk-employ{
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+    padding-right: 240px;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+.jk-employ h2,
+.jk-sku h2,
+.jk-offline h2
+,.jk-college h2
+,.jk-vip h2
+,.jk-story h2
+,.jk-partnet h2
+{
+	font-size: 18px;
+    color: #555;
+    line-height: 18px;
+    height: 18px;
+    margin-bottom: 22px;
+    margin-top: 0px;	
+    font-weight: normal;
+}
+.pager-wrap .jk-employ .jk-ban{
+	float: left;
+    font-size: 0;/* why */
+    width: 370px;
+    height: 75px;
+    background: #fff;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    line-height: 75px;
+}
+
+.pager-wrap .jk-employ a.jk-ban p{
+	color: #fff;
+    font-size: 15px;
+    line-height: 75px;
+    padding-left: 120px;
+    text-align: center;
+}
+.pager-wrap .jk-employ .jk-ban:hover,
+.pager-wrap .jk-employ .ad-jiuye:hover
+{
+	-moz-box-shadow: 0 4px 8px rgba(0,0,0,.4);
+	     box-shadow: 0 4px 8px rgba(0,0,0,.4);
+	-webkit-transition: box-shadow .2s linear;
+	-moz-transition: box-shadow .2s linear, -moz-box-shadow .2s linear;
+	transition: box-shadow .2s linear;
+	transition: box-shadow .2s linear, -moz-box-shadow .2s linear;
+}
+.pager-wrap .jk-employ .web{
+	background: url(../img/jiuye-web03_b78e3f6.png) 0 0 no-repeat;
+	-moz-background-size: 370px 75px;
+	     background-size: 370px 75px;
+}
+.pager-wrap .jk-employ .php{
+	background: url(../img/jiuye-php03_8cdf521.png) 0 0 no-repeat;
+}
+.pager-wrap .jk-employ .javaweb{
+	background: url(../img/jiuye-java03_302dbd8.png) 0 0 no-repeat;
+}
+.pager-wrap .jk-employ .ui{
+	background: url(../img/jiuye-ux03_45d7813.png) 0 0 no-repeat;
+}
+.pager-wrap .jk-employ .ad-jiuye{
+	position: absolute;
+    top: 40px;
+    right: 0;
+    width: 240px;
+    height: 160px;
+}
+
+.jk-sku{
+	width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    margin-bottom: 40px;	
+}
+.jk-sku ul{
+	width: 100%;
+    height: 270px;
+}
+.jk-sku li{
+    float: left;
+    width: 235px;
+    height: 100%;
+    margin-right: 20px;
+    border: 1px solid #e9e9e9;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+.jk-sku li:hover{
+    -moz-box-shadow: 0 2px 6px #ccc;
+         box-shadow: 0 2px 6px #ccc;
+    -webkit-transition: box-shadow .5s;
+}
+.jk-sku li:last-child{
+	margin-right: 0;
+}
+
+.jk-sku li img{
+    width: 100%;
+    height: 155px;
+}
+
+.jk-sku .sku-container{
+    height: 113px;
+    padding: 14px;
+    position: relative;
+    background: #fff;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+.jk-sku .sku-container .sku-title{
+    width: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    color: #555;
+    line-height: 18px;
+    height: 36px;
+}
+.jk-sku .sku-container .sku-info{
+    margin-top: 6px;
+    color: #999;
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px;
+}
+.jk-sku .sku-container .sku-price{
+    float: left;
+    font-size: 18px;
+    color: #ff5c00;
+    /* vertical-align: bottom; */
+    margin-right: 5px;
+    margin-top: 8px;	
+}
+.jk-sku .sku-container .sku-price:before{
+	content: '¥';
+    font-size: 14px;
+    margin-right: 3px;
+}
+
+.jk-sku .sku-container .sku-throught{
+	float: left;
+    font-size: 12px;
+    color: #999;
+    margin-top: 14px;
+    text-decoration: line-through;
+    vertical-align: bottom;	
+}
+.jk-sku .sku-container .sku-num{
+    display: inline-block;
+    height: 14px;
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    color: #999;
+    font-size: 12px;
+}
+
+/* offline  */
+.jk-offline{
+    width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.jk-offline ul{
+    overflow: hidden;
+}
+.jk-offline .daniu li,
+.jk-offline .mogui li{
+    float: right;
+    position: relative;
+    width: 261px;
+    height: 139px;
+    -webkit-transition: all .8s;
+    -moz-transition: all .8s;
+    transition: all .8s;
+}
+
+.jk-offline .mogui{
+	margin-top: 20px;
+}
+
+.jk-offline .daniu li{
+    background: #0276f1;
+}
+.jk-offline .mogui li{
+	background: #EB313E;
+}
+
+.jk-offline .daniu li a
+,.jk-offline .mogui li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 35px;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+
+.jk-offline .daniu li:nth-child(2)
+,.jk-offline .daniu li:nth-child(4){
+	background: #3390f3;
+	-webkit-transition: all .8s;
+	-moz-transition: all .8s;
+	transition: all .8s;
+}
+
+.jk-offline .mogui li:nth-child(2)
+,.jk-offline .mogui li:nth-child(4){
+	background: #F64450;
+	-webkit-transition: all .8s;
+	-moz-transition: all .8s;
+	transition: all .8s;
+}
+
+/* 在li:nth-child(3)之前定义，则hover效果不会影响到它 */
+.jk-offline .daniu li:hover{
+	background: #0569d3;
+	-webkit-transition: all .8s;
+	-moz-transition: all .8s;
+	transition: all .8s;
+}
+.jk-offline .mogui li:hover{
+	background: #bc2732;
+	-webkit-transition: all .8s;
+	-moz-transition: all .8s;
+	transition: all .8s;
+}
+.jk-offline .daniu li:nth-child(3){
+	float: left;
+    width: 478px;
+    height: 278px;
+        background: url(../img/daniu-bg2_5bb23e1.png) center center no-repeat;
+    -moz-background-size: 480px 278px;
+         background-size: 480px 278px;
+}
+.jk-offline .mogui li:nth-child(3){
+    float: left;
+    width: 478px;
+    height: 278px;
+    background: url(../img/mogui-bg_ee9827b.png) center center no-repeat;
+    -moz-background-size: 480px 278px;
+         background-size: 480px 278px;
+}
+.jk-offline li span{
+	display: block;
+	margin: 0 auto;
+	margin-bottom:15px; 
+
+}
+
+/* daniu span */
+.jk-offline .daniu li:nth-child(1) span{
+	width: 21px;
+    height: 33px;
+    background: url(../img/daniu-05_b18767c.png) center center no-repeat;
+    -moz-background-size: cover;
+         background-size: cover;
+}
+.jk-offline .daniu li:nth-child(2) span{
+	width: 31px;
+    height: 28px;
+    background: url(../img/daniu-06_5b9a64a.png) center center no-repeat;
+    -moz-background-size: cover;
+         background-size: cover;
+}
+
+.jk-offline .daniu li:nth-child(4) span{
+	width: 31px;
+    height: 30px;
+    background: url(../img/daniu-07_e81e2d7.png) center center no-repeat;
+    -moz-background-size: cover;
+         background-size: cover;
+}
+.jk-offline .daniu li:nth-child(5) span{
+    width: 29px;
+    height: 31px;
+    background: url(../img/daniu-08_a15e689.png) center center no-repeat;
+    -moz-background-size: cover;
+         background-size: cover;
+}
+
+.jk-offline .daniu li:nth-child(3) .ban{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+}
+.jk-offline .daniu li:nth-child(3) .top-title{
+    font-size: 37px;
+    margin-bottom: 10px;
+}
+.jk-offline .daniu li:nth-child(3) .title{
+	font-size: 40px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+.jk-offline .daniu li:nth-child(3) .bot-title{
+	font-size: 26px;
+}
+.jk-offline .daniu li:nth-child(3) i{
+	display: inline-block;
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #000;
+	-webkit-transition: opacity .8s;
+	-moz-transition: opacity .8s;
+	transition: opacity .8s;
+}
+.jk-offline .daniu li:nth-child(3):hover i{
+	opacity: .2;
+	-webkit-transition: opacity .8s;
+	-moz-transition: opacity .8s;
+	transition: opacity .8s;
+}
+
+/* mogui span */
+.jk-offline .mogui li:nth-child(1) span{
+    width: 31px;
+    height: 24px;
+    background: url(../img/mogui-02_5e33480.png) center center no-repeat;
+    -moz-background-size: cover;
+         background-size: cover;
+}
+.jk-offline .mogui li:nth-child(2) span{
+	width: 31px;
+    height: 28px;
+    background: url(../img/mogui-01_08e776e.png) center center no-repeat;
+    -moz-background-size: cover;
+         background-size: cover;
+}
+
+.jk-offline .mogui li:nth-child(4) span{
+    width: 31px;
+    height: 30px;
+    background: url(../img/mogui-04_ce7d6bc.png) center center no-repeat;
+    -moz-background-size: cover;
+         background-size: cover;
+}
+.jk-offline .mogui li:nth-child(5) span{
+    width: 29px;
+    height: 31px;
+    background: url(../img/mogui-03_e9f2b48.png) center center no-repeat;
+    -moz-background-size: cover;
+         background-size: cover;
+}
+.jk-offline .mogui li:nth-child(3) .ban{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    background: -webkit-linear-gradient(right,#000 0,rgba(216,216,216,0) 100%);
+    background: -moz-linear-gradient(right,#000 0,rgba(216,216,216,0) 100%);
+    background: linear-gradient(-90deg,#000 0,rgba(216,216,216,0) 100%)
+}
+.jk-offline .mogui li:nth-child(3) .top-title{
+    font-size: 37px;
+    margin-bottom: 10px;
+}
+.jk-offline .mogui li:nth-child(3) .title{
+	font-size: 40px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+.jk-offline .mogui li:nth-child(3) .bot-title{
+	font-size: 26px;
+}
+.jk-offline .mogui li:nth-child(3) i{
+	display: inline-block;
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #000;
+	-webkit-transition: opacity .8s;
+	-moz-transition: opacity .8s;
+	transition: opacity .8s;
+}
+.jk-offline .mogui li:nth-child(3):hover i{
+	opacity: .2;
+	-webkit-transition: opacity .8s;
+	-moz-transition: opacity .8s;
+	transition: opacity .8s;
+}
+
+
+/* college */
+.jk-college{
+    width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.jk-college ul{
+	overflow: hidden;
+}
+
+.jk-college ul li{
+	float: left;
+	position: relative;
+    /* background: #ccc; */
+    width: 240px;
+    height: 130px;
+    margin-left: 10px;
+}
+
+.jk-college ul li img{
+    display: inline-block;
+    width: 240px;
+    height: 130px;
+}
+
+.jk-college ul li span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	text-align: center;
+    font-size: 14px;
+    padding-top: 88px;
+}
+
+.jk-college ul li i{
+	display: inline-block;
+	position: absolute;
+	width: 100%;/* 同样适用于.web */
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: 0;
+	-webkit-transition: opacity .8s;
+	-moz-transition: opacity .8s;
+	transition: opacity .8s;
+}
+
+.jk-college ul li:hover i{
+	opacity: .2;
+	-webkit-transition: opacity .8s;
+	-moz-transition: opacity .8s;
+	transition: opacity .8s;
+}
+
+/* web样式 */
+.jk-college ul .web{
+    width: 500px;
+    height: 270px;
+    margin-left: 0;
+}
+
+.jk-college ul .web img{
+    width: 500px;
+    height: 270px;
+}
+
+.jk-college ul .web span{
+	padding-top: 180px;
+    font-size: 20px;
+    background: url(../img/cweb_2d70d0b.png) no-repeat center 70px;
+    -moz-background-size: 55px 84px;
+         background-size: 55px 84px;
+}
+
+/* line one */
+.jk-college ul li:nth-child(2)
+,.jk-college ul li:nth-child(3){
+	margin-bottom: 10px;
+}
+
+.jk-college ul .python span{
+    background: url(../img/cpython_5ed9df4.png) no-repeat center 31px;
+    -moz-background-size: 36px 36px;
+         background-size: 36px 36px;
+}
+
+.jk-college ul .go span{
+    background: url(../img/cgo_e66208d.png) no-repeat center 33px;
+    -moz-background-size: 36px 29px;
+         background-size: 36px 29px;
+}
+
+.jk-college ul .ios span{
+    background: url(../img/cios_dc0ca8e.png) no-repeat center 36px;
+    -moz-background-size: 32px 36px;
+         background-size: 32px 36px;	
+}
+
+.jk-college ul .more span{
+	background: url(../img/cwechat_624099d.png) no-repeat center 40px;
+    -moz-background-size: 40px 33px;
+         background-size: 40px 33px;
+}
+
+/* vip */
+.jk-vip{
+    width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.jk-vip ul{
+    width: 100%;
+    height: 310px;
+}
+
+.jk-vip ul li{
+	float: left;
+    width: 158px;
+    height: 150px;
+    border: 1px solid #e9e9e9;
+    background: #fff;
+    margin-right: 10px;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    -webkit-transition: box-shadow .5s;
+    -moz-transition: box-shadow .5s, -moz-box-shadow .5s;
+    transition: box-shadow .5s;
+    transition: box-shadow .5s, -moz-box-shadow .5s;
+}
+
+.jk-vip ul li:hover{
+	-moz-box-shadow: 0 2px 6px #ccc;
+	     box-shadow: 0 2px 6px #ccc;
+	-webkit-transition: box-shadow .5s;
+	-moz-transition: box-shadow .5s, -moz-box-shadow .5s;
+	transition: box-shadow .5s;
+	transition: box-shadow .5s, -moz-box-shadow .5s;
+}
+
+/* line two 上边距 */
+.jk-vip ul li:nth-child(n+7){
+	margin-top: 10px;
+}
+
+/* 每排最后一个元素取消右边距 */
+.jk-vip ul li:nth-child(6)
+,.jk-vip ul li:nth-child(12){
+	margin-right: 0;
+}
+
+.jk-vip ul li a{
+    display: block;
+    height: 100%;
+    text-align: center;
+}
+.jk-vip ul li img{
+	display: inline-block;
+    width: 55px;
+    height: 55px;
+    margin-top: 25px;
+}
+
+.jk-vip ul li p{
+	font-size: 12px;
+    color: #555;
+    height: 22px;
+    line-height: 22px;
+}
+.jk-vip ul li span{
+    display: block;
+    font-size: 12px;
+    color: #35b558;
+    height: 22px;
+    line-height: 22px;
+}
+
+.jk-vip .vip-all{	
+    display: block;
+    margin: 0 auto;
+    margin-top: 38px;
+    width: 120px;
+    height: 32px;
+    font-size: 14px;
+    border: 1px solid #35b558;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color: #35b558;
+    line-height: 30px;
+    text-align: center;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+
+.jk-vip .vip-all:hover{
+	background: #35b558;
+	color: #fff;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+
+/* partnet */
+.jk-partnet{
+	width: 1000px;
+    margin: 0 auto;
+    height: 240px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.jk-partnet ul{
+    width: 100%;
+    height: 120px;
+}
+
+.jk-partnet ul li{
+    float: left;
+    width: 150px;
+    height: 50px;
+    border: 1px solid #e9e9e9;
+    background: #fff;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+
+.jk-partnet ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.jk-partnet ul li:nth-child(6),
+.jk-partnet ul li:nth-child(12){
+	margin-right: 0;
+}
+
+.jk-partnet ul li:nth-child(n+7){
+	margin-top: 20px;
+}
+
+.jk-partnet ul li:nth-child(1) a{
+    background: url(../img/p_microsoft_82f9a9a.png) no-repeat center;
+}
+.jk-partnet ul li:nth-child(2) a{
+    background: url(../img/p_amd_f9f0c7f.png) no-repeat center;
+}
+.jk-partnet ul li:nth-child(3) a{
+    background: url(../img/p_bootstrap_d0a74f3.png) no-repeat center;
+}
+.jk-partnet ul li:nth-child(4) a{
+    background: url(../img/p_cloudstack_6ecabb3.png) no-repeat center;
+}
+.jk-partnet ul li:nth-child(5) a{
+    background: url(../img/p_cocos_2a0a8f3.png) no-repeat center;
+}
+.jk-partnet ul li:nth-child(6) a{
+    background: url(../img/p_juhe_25bbedf.png) no-repeat center;
+}
+.jk-partnet ul li:nth-child(7) a{
+    background: url(../img/p_qcloud_ab76cc7.png) no-repeat center;
+}
+.jk-partnet ul li:nth-child(8) a{
+    background: url(../img/p_qualcomm_362a472.png) no-repeat center;
+}
+.jk-partnet ul li:nth-child(9) a{
+    background: url(../img/p_tencent_47175aa.png) no-repeat center;
+}
+.jk-partnet ul li:nth-child(10) a{
+    background: url(../img/p_tingyun_c2752df%20%281%29.png) no-repeat center;
+}
+.jk-partnet ul li:nth-child(11) a{
+    background: url(../img/p_tuling_3ec6ea2.png) no-repeat center;
+}
+.jk-partnet ul li:nth-child(12) a{
+    background: url(../img/p_xunfei_d1cd670.png) no-repeat center;
+}
+
+.jk-partnet .more-partnet{
+    display: block;
+    margin: 0 auto;
+    margin-top: 38px;
+    width: 120px;
+    height: 32px;
+    font-size: 14px;
+    border: 1px solid #35b558;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color: #35b558;
+    line-height: 30px;
+    text-align: center;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;	
+}
+.jk-partnet .more-partnet:hover{
+	background: #35b558;
+	color: #fff;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+

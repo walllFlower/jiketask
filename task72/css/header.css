@@ -1,0 +1,519 @@
+html,body,header,nav,div,ul,li,a,span,i,dl,p,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+    font-family: Verdana,"Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,sans-serif;
+}
+
+body{
+	background-color: #f5f5f5;
+}
+ul{	
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+header{
+    height: 60px;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+.header-wrap{
+	position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    height: 59px;
+    line-height: 59px;
+    background: #fff;
+}
+.logo{
+    float: left;
+    width: 109px;
+    height: 60px;
+    display: inline-block;
+    margin-right: 60px;
+}
+
+.logo > img{
+	float: left;
+	margin-top: 10px;
+	height: 40px;
+	width: 109px;
+	border: 0 none;/* 为什么写两个 */
+}
+
+.header-nav li{
+    float: left;
+	position: relative;
+    height: 60px;
+    font-size: 14px;
+    display: inline-block;/* 浮动已达到效果了？ */
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.header-nav li:hover{
+    color: rgb(53, 181, 88);
+}
+
+/* 导航小箭头 */
+.header-nav li.list:after{
+	content: '';
+	position: absolute;
+	top: 24px;
+	right: -16px;
+	display: block;
+	height: 8px;
+	width: 8px;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	-webkit-transform: rotate(-45deg);
+	   -moz-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}
+
+/* 鼠标悬浮小箭头转动 */
+.header-nav li.list:hover:after{
+    border-color:rgb(53, 181, 88);
+	top: 28px;
+	-webkit-transform: rotate(135deg);
+	   -moz-transform: rotate(135deg);
+	    -ms-transform: rotate(135deg);
+	        transform: rotate(135deg);
+	-webkit-transition: top .3s ease-in,-webkit-transform .3s ease-in;
+	transition: top .3s ease-in,-webkit-transform .3s ease-in;
+	-moz-transition: transform .3s ease-in,top .3s ease-in,-moz-transform .3s ease-in;
+	transition: transform .3s ease-in,top .3s ease-in;
+	transition: transform .3s ease-in,top .3s ease-in,-webkit-transform .3s ease-in,-moz-transform .3s ease-in;
+}
+
+/* header-nav中第一个导航内容:首页 */
+.header-nav ul > li:first-child a{
+    color: rgb(53, 181, 88);
+    text-decoration: none;
+}
+
+.header-nav .sub-menu{
+	display: none;
+	opacity: 0;
+	/* visibility: hidden; */
+	position: absolute;
+	z-index: 1000;
+	top: 60px;
+	left: 0;
+	background: #fff;
+	font-size: 12px;
+	color: #666;
+	width: 280px;
+} 
+
+/* transition不支持display,所以用animation达到渐入效果
+   也可使用visibility,transition支持 
+*/
+.header-nav li.list:hover .sub-menu{
+	display: block;
+	opacity: 1;
+	/* visibility: visible; */
+	/* transition: all 1s ease-in; */
+	-webkit-animation: listshow 0.8s ease normal;
+	   -moz-animation: listshow 0.8s ease normal;
+	        animation: listshow 0.8s ease normal;
+}
+
+
+/* sub-menu fadein */
+@-webkit-keyframes listshow {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes listshow {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes listshow {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* sub-menu a公共样式 */
+.header-nav .sub-menu a{
+    display: block;
+    white-space: normal;
+    padding: 0 15px;
+    color: #666;
+    /* font-size: 100%;该属性可以从父元素继承 */
+}
+
+.header-nav .sub-menu a:hover{
+	color: #35b558;
+}
+
+
+/* school-menu */
+.header-nav .school-menu h3{
+	margin: 10px 0;
+    padding: 0 15px;
+    background: #fafafa;
+    height: 28px;
+    line-height: 28px;
+    font-weight: 300;
+    font-size: 100%; 
+}
+
+.header-nav .school-menu a{
+	height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+}
+
+.header-nav .school-menu i{
+	background: url(../img/allicon4.png) 0 0 no-repeat;
+	-moz-background-size: 16px 148px;
+	     background-size: 16px 148px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 10px!important;
+}
+
+.header-nav .school-menu i.web-icon{
+	background: url(../img/allicon.png) 0 0 no-repeat;
+    -moz-background-size: 64px 64px;
+         background-size: 64px 64px;/* 将图像缩小一倍 */
+	background-position: -15px -27px;
+}
+.header-nav .school-menu i.wechat-icon{
+	background-position: -2px -60px;
+}
+.header-nav .school-menu i.python-icon{
+	background-position: -2px -2px;
+}
+.header-nav .school-menu i.go-icon{
+	background-position: -2px -38px;
+}
+.header-nav .school-menu i.android-icon{
+	background: url(../img/allicon.png) 0 0 no-repeat;
+    -moz-background-size: 64px 64px;
+         background-size: 64px 64px;/* 将图像缩小一倍 */
+	background-position: -45px -14px;
+}
+.header-nav .school-menu i.ios-icon{
+	background-position: -2px -82px;
+}
+
+/* vip-lesson */
+.header-nav .vip-lesson a{
+	display: block;
+    height: 40px;
+    line-height: 40px;
+}
+
+.header-nav .vip-lesson span{
+	color: #bbb;
+    float: right;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;/* 为什么用这个？ */
+}
+
+.header-nav .vip-lesson i{
+	/* 默认使用的雪碧图 */
+	background: url(../img/allicon.png) 0 0 no-repeat;
+	-moz-background-size: 64px 64px;
+	     background-size: 64px 64px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 10px!important;
+    margin-left: 5px;
+}
+
+.header-nav .vip-lesson i.kck-icon{
+	background-position: 0 -13px;
+}
+.header-nav .vip-lesson i.zyljt-icon{
+	background-position: -45px 0;
+}
+.header-nav .vip-lesson i.zstxt-icon{
+	background-position: -30px -13px;
+}
+.header-nav .vip-lesson i.xlkc-icon{
+	background: url(../img/xlkc2.png) 0 0 no-repeat;
+	-moz-background-size: 12px 12px;
+	     background-size: 12px 12px;
+	background-position: 0 0;
+
+}
+.header-nav .vip-lesson i.kcbq-icon{
+	background-position: -15px -13px;
+}
+.header-nav .vip-lesson i.vip-icon{
+	background-position: -16px 0;
+}
+
+.header-nav .vip-lesson i.jswd-icon{
+	background-position: 0 -27px;
+}
+
+.header-nav .vip-lesson i.wiki-icon{
+	background-position: -29px -27px;
+}
+.header-nav .vip-lesson i.sq-icon{
+	background-position: 0 2px;
+}
+.header-nav .vip-lesson i.zygx-icon{
+	background-position: -30px 0;
+}
+
+/* header icon-box */
+.header-wrap .icon-box{
+	float: right;
+}
+
+.header-wrap .icon-box span{
+    height: 60px;
+    width: 17px;
+    display: inline-block;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.header-wrap .icon-box span.search-icon{
+	background: url(../img/search-icon.png) 0 0 no-repeat;
+	-moz-background-size: 17px 17px;
+	     background-size: 17px 17px;
+	background-position: 0;/* 为什么 */
+}
+
+.header-wrap .icon-box span.app-icon{
+	position: relative;
+	background: url(../img/app-icon.png) 0 0 no-repeat;
+	-moz-background-size: 17px 17px;
+	     background-size: 17px 17px;
+	background-position: 0;
+}
+
+.header-wrap .app-icon .sub-menu{
+	display: none;
+	opacity: 0;
+	background: #fff;
+	position: absolute;
+	width: 120px;
+	z-index: 1200;
+	top: 60px;
+	right: -50px;
+	padding: 0;
+}
+.header-wrap .app-icon .sub-menu:after{
+	content: "";
+	position: absolute;
+	z-index: 1200;
+	background: #fff;
+	top: -8px;
+	right: 51px;
+	display: block;
+	width: 15px;
+	height: 15px;
+	border-top:1px solid #ececec;
+	border-left:1px solid #ececec;
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
+.header-wrap .app-icon:hover .sub-menu{
+	display: block;
+	opacity: 1;
+	-webkit-animation: listshow 0.8s ease normal;
+	   -moz-animation: listshow 0.8s ease normal;
+	        animation: listshow 0.8s ease normal;
+}
+.header-wrap .app-icon img{
+	width: 100%;
+}
+
+/* header login-icon */
+.header-wrap .login-icon{
+	position: relative;
+    height: 60px!important;
+    width: 25px!important;
+}
+
+
+.header-wrap .login-icon a img{
+    width: 25px;
+    height: 25px;
+    margin-top: 13px;
+    display: block;
+    -moz-border-radius: 50%;
+         border-radius: 50%;
+    border: 1px solid #ddd;
+    overflow: hidden;	
+}
+
+.header-wrap .login-icon i.year-vip{
+	position: absolute;
+    background: url(../img/allicon2.png) 0 0 no-repeat;
+    -moz-background-size: 64px 64px;
+         background-size: 64px 64px;
+    background-position: -1px -32px;
+    width: 13px;
+    height: 13px;
+    margin-right: 10px;
+    display: inline-block;
+    top: 28px;
+    left: 15px;
+}
+
+.header-wrap .login-icon .sub-menu{
+	position: absolute;
+	z-index: 1200;
+	display: none;
+	opacity: 0;
+	padding: 10px 0;
+	width: 120px;
+	top: 60px;
+	right: -10px;
+	cursor: pointer;
+	background: #fff;
+}
+
+.header-wrap .login-icon:hover .sub-menu{
+	display: block;
+	opacity: 1;
+	-webkit-animation: listshow 0.8s ease normal;
+    -moz-animation: listshow 0.8s ease normal;
+        animation: listshow 0.8s ease normal;
+}
+
+.header-wrap .login-icon .sub-menu:after{
+	content: "";
+	position: absolute;
+	z-index: 1200;
+	background: #fff;
+	top: -8px;
+	right: 13px;
+	display: block;
+	width: 15px;
+	height: 15px;
+	border-top:1px solid #ececec;
+	border-left:1px solid #ececec;
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
+.header-wrap .login-icon .sub-menu dd{
+	text-align: left;
+	font-size: 12px;
+	line-height: 35px;
+	padding-left: 10px;
+	margin: 0;
+}
+.header-wrap .login-icon .sub-menu dd a{
+    display: block;
+    color: #666;
+    height: 35px;
+    line-height: 35px;
+}
+.header-wrap .login-icon .sub-menu dd:hover{
+	background: #f1f1f1;
+}
+.header-wrap .login-icon .sub-menu dd:hover a{
+	color: rgb(53, 181, 88);
+}
+
+.header-wrap .login-icon i{
+	background: url(../img/allicon2.png) 0 0 no-repeat;
+	-moz-background-size: 64px 64px;
+	     background-size: 64px 64px;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.header-wrap .login-icon dd.user-level:after{
+    content:"";
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.header-wrap .login-icon dd a.rzno-vip{
+	margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 45px;
+    height: 14px;
+    background: url(../img/rz-no.png);
+    -moz-background-size: 45px 14px;
+         background-size: 45px 14px;
+}
+.header-wrap .login-icon dd a.year-vip{
+    background: url(../img/allvipicon.png);
+    -moz-background-size: 306px 16px;
+         background-size: 306px 16px;
+    background-position: -143px -1px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 45px;
+    height: 14px;
+}
+
+.header-wrap .login-icon i.xxzx-icon{
+	background-position: -16px -15px;
+
+}
+.header-wrap .login-icon i.grzy-icon{
+	background-position: -45px -1px;
+
+}
+.header-wrap .login-icon i.xxtz-icon{
+	background-position: -16px -30px;
+
+}
+.header-wrap .login-icon i.zhsz-icon{
+	background-position: -30px -1px;
+
+}
+.header-wrap .login-icon i.tc-icon{
+	background-position: -16px -1px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

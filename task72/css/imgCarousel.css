@@ -1,0 +1,158 @@
+.jk-banner{
+    height: 330px;
+    width: 750px;
+    background: #f5f5f5;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+}
+.jk-banner .banner-con{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#banner-arrow-left{
+    display: none;
+    opacity: 0;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -40px;
+    z-index: 2;
+    cursor: pointer;
+    background: url(../img/arrow_dd5a57d.png) no-repeat center;
+    -moz-background-size: 50px 80px;
+         background-size: 50px 80px;
+    -webkit-animation: fadeOutArrow .5s;
+       -moz-animation: fadeOutArrow .5s;
+            animation: fadeOutArrow .5s;
+
+}
+#banner-arrow-right{
+    display: none;
+    opacity: 0;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -40px;
+    z-index: 2;
+    cursor: pointer;
+    background: url(../img/arrow_dd5a57d.png) no-repeat center;
+    -moz-background-size: 50px 80px;
+         background-size: 50px 80px;
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-animation: fadeOutArrow .5s;
+       -moz-animation: fadeOutArrow .5s;
+            animation: fadeOutArrow .5s;
+
+}
+.jk-banner .banner-con:hover #banner-arrow-left
+,.jk-banner .banner-con:hover #banner-arrow-right{
+    display: block;
+    opacity: 1;
+    -webkit-animation: fadeInArrow .5s;
+       -moz-animation: fadeInArrow .5s;
+            animation: fadeInArrow .5s;
+}
+
+@-webkit-keyframes fadeInArrow{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
+@-moz-keyframes fadeInArrow{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
+@keyframes fadeInArrow{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
+@-webkit-keyframes fadeOutArrow{
+    0%{opacity:1;}
+    100%{opacity:0;}
+}
+
+@-moz-keyframes fadeOutArrow{
+    0%{opacity:1;}
+    100%{opacity:0;}
+}
+
+@keyframes fadeOutArrow{
+    0%{opacity:1;}
+    100%{opacity:0;}
+}
+
+#banner-arrow-right:hover
+,#banner-arrow-left:hover{
+    background: url(../img/arrow-hover_5f6b80f.png) no-repeat center;
+    -moz-background-size: 50px 80px;
+         background-size: 50px 80px;
+}
+.jk-banner .swiper-wrapper{
+    width: 4500px;
+    height: 330px;
+    margin-left: 0;
+    /* transform: translate3d(-1500px, 0px, 0px); */
+    /* transition:margin-left .8s ease-in; */
+}
+.jk-banner .swiper-slide{
+    position: relative;
+    float: left;
+    height: 330px!important;
+}
+
+.jk-banner .swiper-wrapper .php{
+    background: url(../img/58f47c5c0b587.png) center center no-repeat rgb(245, 245, 245);
+    width: 750px;
+}
+.jk-banner .web-offline{
+    background: url(../img/58ef39eb56313.jpg) center center no-repeat rgb(245, 245, 245);
+    width: 750px;
+}
+.jk-banner .ui{
+    background: url(../img/58573b737d2db.jpg) center center no-repeat rgb(245, 245, 245);
+    width: 750px;
+}
+.jk-banner .web-online{
+    background: url(../img/58573bd1eb3fc.jpg) center center no-repeat rgb(245, 245, 245);
+    width: 750px;
+}
+
+.jk-banner .banner-pagination{
+    position: absolute;
+    left: 0;
+    bottom: 36px;
+    text-align: center;
+    width: 100%;
+    z-index: 800;
+    height: 0;
+    cursor: pointer;
+}
+
+.jk-banner .swiper-pagination-switch{
+    display: inline-block;
+    margin-right: 8px;
+    text-align: center;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.jk-banner .swiper-active-switch{
+    width: 8px;
+    height: 16px;
+    background: #35b558;
+    position: relative;
+    top: -4px;
+}
